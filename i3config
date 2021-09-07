@@ -8,17 +8,16 @@
 
 #exec --no-startup-id  export LANG=en_US.UTF-8
 #exec --no-startup-id light -A 10
-exec --no-startup-id picom
-##exec --no-startup-id nitrogen --restore
-#exec --no-startup-id NetworkManager
+exec --no-startup-id picom -b --experimental-backends
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id variety
 exec --no-startup-id bash ~/.config/polybar/forest/launch.sh
-exec --no-startup-id bash ~/.config/polybar/material/scripts/pywal.sh /home/naruto/my_shit/Backgrounds
 exec --no-startup-id xset r rate 175 65
 exec --no-startup-id setxkbmap -layout pt
 exec --no-startup-id dunst
 #exec --no-startup-id fcitx5
 ##exec --no-startup-id tlp bat
-#exec --no-startup-id bash i3-battery-popup -L 30 -t 5m -n
+exec --no-startup-id bash i3-battery-popup -L 30 -t 5m -n
 
 # i3 config file (v4)
 #
@@ -70,7 +69,7 @@ bindsym $mod+Escape exec i3lock-fancy-multimonitor
 bindsym $mod+p exec setxkbmap -layout pt; exec xset r rate 175 65
 bindsym $mod+o exec setxkbmap -layout us
 
-bindsym $mod+z exec picom
+bindsym $mod+z exec picom -b --experimental-backends
 bindsym $mod+shift+z exec killall picom
 
 bindsym $mod+period exec discord-ptb
@@ -81,7 +80,7 @@ bindsym $mod+Shift+Escape exec i3lock -c 000000 -n
 bindsym $mod+shift+b exec notify-send -u normal  "$(acpi)" 
 
 #set a new background
-bindsym $mod+b exec wal -i /home/naruto/my_shit/Backgrounds/
+#bindsym $mod+b exec wal -i /home/naruto/my_shit/Backgrounds/
 
 
 #kill focused window
@@ -92,8 +91,8 @@ bindsym $mod+Shift+q kill
 #gaps outer 20
 
 ##### i3-gaps ##############
-for_window [class=".*"] border pixel 0
-gaps inner 0
+for_window [class=".*"] border pixel 2
+gaps inner 17
 gaps outer 0
 gaps horizontal 0
 
