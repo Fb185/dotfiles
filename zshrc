@@ -126,7 +126,7 @@ then
     echo You are running on battery
 fi
 
-
+#this is a coment to explain git
 
 
 
