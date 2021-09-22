@@ -110,11 +110,16 @@ alias vimrc="vim /home/naruto/.vimrc"
 alias vim="nvim"
 alias cdd="cd /home/data2"
 alias t="tmux"
+alias h="htop"
+alias cheat="/home/naruto/./cht.sh"
 alias p="pacman -S"
 alias pss="pacman -Ss"
+alias yss="yay -Ss"
 alias pi="pacman -Si"
+alias yi="yay -Si"
 alias killnaruto="pkill -9 -u naruto"
 alias wydnaruto="pgrep -lu naruto"
+alias pb="~/.config/polybar/colorblocks/launch.sh"
 export EDITOR=nvim;
 bindkey '   ' autosuggest-accept
 bindkey '^ ' autosuggest-accept
@@ -126,7 +131,7 @@ then
     echo You are running on battery
 fi
 
-#this is a coment to explain git
+
 
 
 

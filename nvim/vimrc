@@ -26,9 +26,10 @@ set guioptions-=r
 set go-=L
 
 
+
 let g:airline_powerline_fonts = 1
 let g:OmniSharp_server_stdio = 1
-
+let g:ycm_auto_hover=''
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -46,8 +47,7 @@ Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'OmniSharp/omnisharp-vim'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 Plug 'nvim-lua/popup.nvim'
@@ -60,7 +60,7 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-floaterm'
-
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 let g:dashboard_default_executive ='telescope'
@@ -73,8 +73,6 @@ nnoremap <C-f> :GitFiles<CR>
 
 
 nnoremap <C-t> :FloatermToggle<CR>
-
-
 
 
 set background=dark
@@ -130,6 +128,10 @@ if executable('rg')
 endif
 nnoremap<leader>r :Rg<CR>
 
+"coc
+"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"inoremap <silent><expr> <c-space> coc#refresh()
 
 
 "alt for visual mode
