@@ -78,6 +78,12 @@ bindsym $mod+a exec firefox
 
 bindsym $mod+Shift+Escape exec i3lock -c 000000 -n
 
+bindsym F5 exec light -A 10
+bindsym F4 exec light -U 10
+
+bindsym Print exec spectacle
+bindsym $mod+Shift+p exec spectacle
+bindsym F7 exec spectacle -r
 
 bindsym $mod+shift+b exec notify-send -u normal  "$(acpi)" 
 
