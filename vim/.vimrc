@@ -68,7 +68,7 @@ let g:dashboard_default_executive ='telescope'
 colorscheme gruvbox
 nmap<leader>gd <plug>(coc-definition)
 nmap<leader>gr <Plug>(coc-references)
-nnoremap <C-f> :GitFiles<CR>
+nnoremap <C-s> :GitFiles<CR>
 
 cmap w!! w !sudo tee > /dev/null %
 
