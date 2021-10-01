@@ -70,7 +70,7 @@ nmap<leader>gd <plug>(coc-definition)
 nmap<leader>gr <Plug>(coc-references)
 nnoremap <C-f> :GitFiles<CR>
 
-
+cmap w!! w !sudo tee > /dev/null %
 
 nnoremap <C-t> :FloatermToggle<CR>
 
@@ -81,6 +81,8 @@ let mapleader = " "
 "keybindig to move in windows, undotree, and split
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <C-g> :NERDTreeToggle<CR>
 
@@ -201,11 +203,6 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
 
-
-nnoremap <leader>h :wincmd h<bar> :vertical resize 142<CR>
-nnoremap <leader>l :wincmd l<bar> :vertical resize 142<CR>
-nnoremap <leader><up> :vertical resize 142<CR>
-nnoremap <leader><down> :wincmd v<bar> :vertical resize 30<bar> :q<CR>
 
 
 

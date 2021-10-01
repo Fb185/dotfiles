@@ -13,7 +13,7 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id variety
 exec --no-startup-id bash ~/.config/polybar/colorblocks/launch.sh
 exec --no-startup-id xset r rate 175 65
-exec --no-startup-id setxkbmap -layout pt
+exec --no-startup-id setxkbmap -layout custom
 exec --no-startup-id dunst
 #exec --no-startup-id fcitx5
 ##exec --no-startup-id tlp bat
@@ -67,7 +67,8 @@ bindsym $mod+shift+Return exec cool-retro-term; exec killall picom
 bindsym $mod+Escape exec i3lock-fancy-multimonitor
 
 bindsym $mod+p exec setxkbmap -layout pt; exec xset r rate 175 65
-bindsym $mod+o exec setxkbmap -layout us
+bindsym $mod+o exec setxkbmap -layout custom;exec xset r rate 175 65
+
 
 bindsym $mod+z exec picom -b --experimental-backends
 bindsym $mod+shift+z exec killall picom
@@ -85,6 +86,9 @@ bindsym Print exec spectacle
 bindsym $mod+Shift+p exec spectacle
 bindsym F7 exec spectacle -r
 
+bindsym F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym F1 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym $mod+shift+b exec notify-send -u normal  "$(acpi)" 
 
 #set a new background
