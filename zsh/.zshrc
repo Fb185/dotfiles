@@ -108,6 +108,7 @@ wal -R
 clear
 alias vimrc="vim /home/naruto/.vimrc"
 alias vim="nvim"
+alias v="nvim"
 alias cdd="cd /home/data2"
 alias t="tmux"
 alias h="htop"
@@ -121,6 +122,7 @@ alias killnaruto="pkill -9 -u naruto"
 alias wydnaruto="pgrep -lu naruto"
 alias pb="~/.config/polybar/colorblocks/launch.sh"
 alias glb="git log --graph --oneline --decorate --all"
+alias cnf="cd /home/naruto/my_shit/dotfiles"
 export EDITOR=nvim;
 bindkey '   ' autosuggest-accept
 bindkey '^ ' autosuggest-accept
