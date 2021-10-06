@@ -82,9 +82,10 @@ bindsym $mod+Shift+Escape exec i3lock -c 000000 -n
 bindsym F5 exec light -A 10
 bindsym F4 exec light -U 10
 
-bindsym Print exec spectacle
-bindsym $mod+Shift+p exec spectacle
-bindsym F7 exec spectacle -r
+bindsym Print exec scrot  -e 'mv $f ~/screenshots/'
+bindsym $mod+Shift+p exec scrot  -e 'mv $f ~/screenshots/'
+bindsym F8 exec scrot -se 'mv $f ~/screenshots/'
+
 
 bindsym F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status

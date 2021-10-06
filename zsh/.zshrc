@@ -1,3 +1,5 @@
+
+#
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -122,7 +124,7 @@ alias killnaruto="pkill -9 -u naruto"
 alias wydnaruto="pgrep -lu naruto"
 alias pb="~/.config/polybar/colorblocks/launch.sh"
 alias glb="git log --graph --oneline --decorate --all"
-alias cnf="cd /home/naruto/my_shit/dotfiles"
+alias cnf="cd /home/naruto/my_shit/dotfiles; nvim"
 export EDITOR=nvim;
 bindkey '   ' autosuggest-accept
 bindkey '^ ' autosuggest-accept
