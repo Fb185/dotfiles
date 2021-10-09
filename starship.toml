@@ -18,6 +18,11 @@ disabled = true
 #symbol = ""
 #style = "bold green"
 
+[java]
+disabled = true
+#symbol = ""
+#style = "bold green"
+
 [username]
 disabled = false
 

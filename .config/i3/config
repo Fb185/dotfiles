@@ -10,7 +10,7 @@
 #exec --no-startup-id light -A 10
 exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id variety
+#exec --no-startup-id variety
 exec --no-startup-id bash ~/.config/polybar/colorblocks/launch.sh
 exec --no-startup-id xset r rate 175 65
 exec --no-startup-id setxkbmap -layout custom
@@ -108,6 +108,11 @@ for_window [class=".*"] border pixel 2
 gaps inner 17
 gaps outer 2
 gaps horizontal 3
+
+client.focused              #353439 #9FEE00 #7B9F35
+client.unfocused            #353439 #9FEE00 #7B9F35
+client.focused_inactive     #353439 #9FEE00 #7B9F35
+
 
 ################ i3-radius #######################
 ##smart_borders on
