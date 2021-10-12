@@ -106,13 +106,15 @@ bindsym $mod+Shift+q kill
 ##### i3-gaps ##############
 for_window [class=".*"] border pixel 2
 gaps inner 17
-gaps outer 2
+gaps outer 3
 gaps horizontal 3
 
-client.focused              #353439 #9FEE00 #7B9F35
-client.unfocused            #353439 #9FEE00 #7B9F35
-client.focused_inactive     #353439 #9FEE00 #7B9F35
-
+client.focused              #353439 #9FEE00 #7B9F35 #9FEE00   
+client.unfocused            #353439 #9FEE00 #7B9F35 #9FEE00
+client.focused_inactive     #353439 #9FEE00 #7B9F35 #9FEE00
+client.background           #353439 #9FEE00 #7B9F35 #9FEE00
+client.urgent               #353439 #9FEE00 #7B9F35 #9FEE00
+client.placeholder          #353439 #9FEE00 #7B9F35 #9FEE00
 
 ################ i3-radius #######################
 ##smart_borders on

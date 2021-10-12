@@ -27,6 +27,7 @@ set go-=L
 
 
 
+
 let g:airline_powerline_fonts = 1
 let g:OmniSharp_server_stdio = 1
 let g:ycm_auto_hover=''
