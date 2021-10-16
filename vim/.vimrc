@@ -26,8 +26,8 @@ set guioptions-=r
 set go-=L
 
 
-
-
+let g:EclimFileTypeValidate = 0
+let g:syntastic_java_checkers = []
 let g:airline_powerline_fonts = 1
 let g:OmniSharp_server_stdio = 1
 let g:ycm_auto_hover=''
@@ -48,7 +48,6 @@ Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 Plug 'nvim-lua/popup.nvim'
