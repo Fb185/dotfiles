@@ -1,6 +1,5 @@
 syntax on
 
-
 set diffopt+=vertical 
 set nohlsearch
 set nopaste
@@ -32,6 +31,7 @@ let g:airline_powerline_fonts = 1
 let g:OmniSharp_server_stdio = 1
 let g:ycm_auto_hover=''
 
+
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -48,7 +48,6 @@ Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
-Plug 'dense-analysis/ale'
 Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 Plug 'nvim-lua/popup.nvim'
 Plug 'ThePrimeagen/harpoon'
