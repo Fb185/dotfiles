@@ -6,17 +6,12 @@
 
 #
 
-#exec --no-startup-id  export LANG=en_US.UTF-8
-#exec --no-startup-id light -A 10
 exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id nitrogen --restore
-#exec --no-startup-id variety
 exec --no-startup-id bash ~/.config/polybar/colorblocks/launch.sh
 exec --no-startup-id xset r rate 175 65
 exec --no-startup-id setxkbmap -layout custom
 exec --no-startup-id dunst
-#exec --no-startup-id fcitx5
-##exec --no-startup-id tlp bat
 exec --no-startup-id bash i3-battery-popup -L 30 -t 5m -n
 
 # i3 config file (v4)
