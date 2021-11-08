@@ -129,6 +129,7 @@ export EDITOR=nvim;
 bindkey '   ' autosuggest-accept
 bindkey '^ ' autosuggest-accept
 alias :q="exit"
+alias Va="exit"
 eval "$(starship init zsh)"
 
 if acpi | grep -oh "Discharging"

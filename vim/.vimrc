@@ -64,7 +64,7 @@ Plug 'Valloric/YouCompleteMe'
 call plug#end()
 let g:dashboard_default_executive ='telescope'
 
-colorscheme gruvbox
+colorscheme pablo
 nmap<leader>gd <plug>(coc-definition)
 nmap<leader>gr <Plug>(coc-references)
 nnoremap <C-s> :GitFiles<CR>
