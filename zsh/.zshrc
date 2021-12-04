@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 wal -R
 clear
-alias vimrc="vim /home/naruto/.vimrc"
+alias vimrc="vim /home/naruto/my_shit/dotfiles/vim/.vimrc"
 alias vim="nvim"
 alias v="nvim"
 alias cdd="cd /home/data2"
@@ -124,12 +124,13 @@ alias killnaruto="pkill -9 -u naruto"
 alias wydnaruto="pgrep -lu naruto"
 alias pb="~/.config/polybar/colorblocks/launch.sh"
 alias glb="git log --graph --oneline --decorate --all"
-alias cnf="cd /home/naruto/my_shit/dotfiles; nvim"
+alias cnf="cd /home/naruto/my_shit/dotfiles; nvim;:q"
 export EDITOR=nvim;
 bindkey '   ' autosuggest-accept
 bindkey '^ ' autosuggest-accept
 alias :q="exit"
 alias Va="exit"
+alias k="xset r rate 175 65; setxkbmap -layout custom"
 eval "$(starship init zsh)"
 
 if acpi | grep -oh "Discharging"
@@ -138,12 +139,9 @@ then
 fi
 
 
-######
-
-
-
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+/home/naruto/./art.sh

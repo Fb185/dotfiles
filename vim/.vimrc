@@ -25,6 +25,7 @@ set guioptions-=r
 set go-=L
 
 
+
 let g:EclimFileTypeValidate = 0
 let g:syntastic_java_checkers = []
 let g:airline_powerline_fonts = 1
@@ -37,6 +38,7 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'lambdalisue/suda.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'morhetz/gruvbox'
@@ -51,7 +53,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 Plug 'nvim-lua/popup.nvim'
 Plug 'ThePrimeagen/harpoon'
-Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
@@ -63,14 +64,15 @@ Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 let g:dashboard_default_executive ='telescope'
+let g:suda#prompt = 'Password: '
+
 
 colorscheme pablo
 nmap<leader>gd <plug>(coc-definition)
 nmap<leader>gr <Plug>(coc-references)
 nnoremap <C-s> :GitFiles<CR>
 
-cmap w!! w !sudo tee > /dev/null %
-
+cnoremap w!! w !sudo tee > /dev/null %
 nnoremap <C-t> :FloatermToggle<CR>
 
 
