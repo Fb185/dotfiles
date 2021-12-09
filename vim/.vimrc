@@ -67,7 +67,7 @@ let g:dashboard_default_executive ='telescope'
 let g:suda#prompt = 'Password: '
 
 
-colorscheme pablo
+colorscheme gruvbox
 nmap<leader>gd <plug>(coc-definition)
 nmap<leader>gr <Plug>(coc-references)
 nnoremap <C-s> :GitFiles<CR>
@@ -102,7 +102,7 @@ nnoremap <C-n> :lua require("harpoon.mark").rm_file()<SPACE>
 "EOF
 
 "opens explorer 
-nnoremap <leader>v :wincmd v<bar> :Ex <bar><CR>
+nnoremap <leader>v :wincmd v<bar> :NERDTreeToggle <bar><CR>
 
 "manual resize keybindig
 nnoremap <silent><leader>+ :vertical resize +4<CR>
