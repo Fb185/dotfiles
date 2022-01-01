@@ -47,13 +47,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-utils/vim-man'
-Plug 'lyuts/vim-rtags'
 Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 Plug 'nvim-lua/popup.nvim'
 Plug 'ThePrimeagen/harpoon'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'glepnir/dashboard-nvim'

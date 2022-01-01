@@ -110,7 +110,7 @@ wal -R
 clear
 alias vimrc="vim /home/naruto/my_shit/dotfiles/vim/.vimrc"
 alias vim="nvim"
-alias v="nvim"
+alias v="vim"
 alias cdd="cd /home/data2"
 alias t="tmux"
 alias h="htop"
@@ -131,6 +131,7 @@ bindkey '^ ' autosuggest-accept
 alias :q="exit"
 alias Va="exit"
 alias k="xset r rate 175 65; setxkbmap -layout custom"
+alias ttyfont="cd /usr/share/kbd/consolefonts;setfont LatGrkCyr-12x22.psfu.gz;cd"
 eval "$(starship init zsh)"
 
 if acpi | grep -oh "Discharging"
