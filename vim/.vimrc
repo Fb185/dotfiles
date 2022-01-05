@@ -45,7 +45,6 @@ Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-utils/vim-man'
 Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
@@ -59,13 +58,16 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'Valloric/YouCompleteMe'
+Plug 'justinmk/vim-sneak'
 
 call plug#end()
 let g:dashboard_default_executive ='telescope'
 let g:suda#prompt = 'Password: '
+let g:sneak#label = 1
+let g:gitblame_enabled = 0
 
-
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme pablo
 nmap<leader>gd <plug>(coc-definition)
 nmap<leader>gr <Plug>(coc-references)
 nnoremap <C-s> :GitFiles<CR>
@@ -76,6 +78,7 @@ nnoremap <C-t> :FloatermToggle<CR>
 
 set background=dark
 
+
 let mapleader = " "
 "keybindig to move in windows, undotree, and split
 nnoremap <leader>j :wincmd j<CR>
@@ -84,6 +87,7 @@ nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <C-g> :NERDTreeToggle<CR>
+
 
 
 "harpoon

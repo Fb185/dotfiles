@@ -109,8 +109,9 @@ source $ZSH/oh-my-zsh.sh
 wal -R
 clear
 alias vimrc="vim /home/naruto/my_shit/dotfiles/vim/.vimrc"
-alias vim="nvim"
 alias v="vim"
+alias vim="nvim"
+alias nvimrc="cd /home/naruto/.config/nvim; nvim init.vim"
 alias cdd="cd /home/data2"
 alias t="tmux"
 alias h="htop"
