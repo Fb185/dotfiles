@@ -67,7 +67,7 @@ let g:sneak#label = 1
 let g:gitblame_enabled = 0
 
 "colorscheme gruvbox
-colorscheme pablo
+" colorscheme pablo
 nmap<leader>gd <plug>(coc-definition)
 nmap<leader>gr <Plug>(coc-references)
 nnoremap <C-s> :GitFiles<CR>
@@ -75,7 +75,7 @@ nnoremap <C-s> :GitFiles<CR>
 cnoremap w!! w !sudo tee > /dev/null %
 nnoremap <C-t> :FloatermToggle<CR>
 
-
+colorscheme rose-pine
 set background=dark
 
 

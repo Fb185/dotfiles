@@ -111,7 +111,7 @@ clear
 alias vimrc="vim /home/naruto/my_shit/dotfiles/vim/.vimrc"
 alias v="vim"
 alias vim="nvim"
-alias nvimrc="cd /home/naruto/.config/nvim; nvim init.vim"
+alias nvimrc="cd /home/naruto/dotfiles/nvim; nvim init.vim;cd"
 alias cdd="cd /home/data2"
 alias t="tmux"
 alias h="htop"
