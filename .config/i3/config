@@ -55,7 +55,7 @@ floating_modifier $mod
 
 # apps and shit
 #bindsym $mod+shift+Return exec alacritty
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 bindsym $mod+shift+Return exec cool-retro-term; exec killall picom
 #bindsym $mod+Return exec cool-retro-term; killall picom
 
