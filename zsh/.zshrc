@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-wal -R
+# wal -R
 clear
 alias vimrc="vim /home/naruto/my_shit/dotfiles/vim/.vimrc"
 alias v="vim"
