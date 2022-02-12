@@ -59,8 +59,15 @@ Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'Valloric/YouCompleteMe'
 Plug 'justinmk/vim-sneak'
+Plug 'terrortylor/nvim-comment'
+Plug 'lewis6991/impatient.nvim'
+Plug 'akinsho/toggleterm.nvim'
+Plug 'preservim/nerdtree'
+Plug 'enricobacis/vim-airline-clock'
 
 call plug#end()
+
+
 let g:dashboard_default_executive ='telescope'
 let g:suda#prompt = 'Password: '
 let g:sneak#label = 1
@@ -86,24 +93,11 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
-nnoremap <C-g> :NERDTreeToggle<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
+nnoremap <leader>/ :lua require("Comment.api").toggle_current_linewise()<CR>
+nnoremap <leader>t :ToggleTerm direction=float<cr>
 
 
-
-"harpoon
-nnoremap <C-h> :lua require("harpoon.ui").toggle_quick_menu()<CR>
-nnoremap <C-m> :lua require("harpoon.mark").add_file()<CR>
-nnoremap <C-n> :lua require("harpoon.mark").rm_file()<SPACE>
-"lua <<EOF
-"    require("harpoon").setup({
-"        global_settings = {
-"            save_on_toggle = false,
-"            save_on_change = true,
-"        },
-"    })
-"EOF
-
-"opens explorer 
 nnoremap <leader>v :wincmd v<bar> :NERDTreeToggle <bar><CR>
 
 "manual resize keybindig
@@ -111,8 +105,8 @@ nnoremap <silent><leader>+ :vertical resize +4<CR>
 nnoremap <silent><leader>- :vertical resize -4<CR>
 
 "sets ctrl + k to esc (exit insert or visual mode)
-inoremap <C-k> <Esc>
-vnoremap <C-k> <Esc>
+inoremap kj <Esc>
+vnoremap kj <Esc>
 
 
 "copy and paste from and to other progams
@@ -132,11 +126,6 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 nnoremap<leader>r :Rg<CR>
-
-"coc
-"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-"inoremap <silent><expr> <c-space> coc#refresh()
 
 
 "alt for visual mode
@@ -165,9 +154,10 @@ lua <<EOF
 EOF
 
 nnoremap <C-p> :Telescope find_files<CR>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>F :Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>sc :Telescope colorscheme<CR>
 
 
 
@@ -192,19 +182,6 @@ let g:dashboard_custom_header = [
 \"                  .....                  ",
 \"                    .                    ",
 \ ]
-
-
-
-
-" Get text in files with Rg
-function! RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
-  let initial_command = printf(command_fmt, shellescape(a:query))
-  let reload_command = printf(command_fmt, '{q}')
-  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
-  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
-endfunction
-command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
 
 
 
