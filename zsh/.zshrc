@@ -125,12 +125,13 @@ alias killnaruto="pkill -9 -u naruto"
 alias wydnaruto="pgrep -lu naruto"
 alias pb="~/.config/polybar/colorblocks/launch.sh"
 alias glb="git log --graph --oneline --decorate --all"
-alias cnf="cd /home/naruto/my_shit/dotfiles; nvim;:q"
+alias cnf="cd /home/naruto/my_shit/dotfiles; nvim .;:q"
 export EDITOR=nvim;
 bindkey '   ' autosuggest-accept
 bindkey '^ ' autosuggest-accept
 alias :q="exit"
 alias Va="exit"
+alias sql="systemctl start docker; docker start suspicious_pike; docker exec -it suspicious_pike bash"
 alias k="xset r rate 175 65; setxkbmap -layout custom"
 alias ttyfont="cd /usr/share/kbd/consolefonts;setfont LatGrkCyr-12x22.psfu.gz;cd"
 eval "$(starship init zsh)"

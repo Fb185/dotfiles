@@ -62,8 +62,8 @@ Plug 'justinmk/vim-sneak'
 Plug 'terrortylor/nvim-comment'
 Plug 'lewis6991/impatient.nvim'
 Plug 'akinsho/toggleterm.nvim'
-Plug 'preservim/nerdtree'
 Plug 'enricobacis/vim-airline-clock'
+Plug 'kyazdani42/nvim-tree.lua'
 
 call plug#end()
 
@@ -93,7 +93,7 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
-nnoremap <leader>e :NERDTreeToggle<CR>
+nnoremap <leader>e :NvimTreeToggle<CR>
 nnoremap <leader>/ :lua require("Comment.api").toggle_current_linewise()<CR>
 nnoremap <leader>t :ToggleTerm direction=float<cr>
 
@@ -151,6 +151,8 @@ lua <<EOF
         }
     }
 }
+require("nvim-tree").setup{}
+
 EOF
 
 nnoremap <C-p> :Telescope find_files<CR>
@@ -183,6 +185,15 @@ let g:dashboard_custom_header = [
 \"                    .                    ",
 \ ]
 
+
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
 
 
 
