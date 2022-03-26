@@ -9,6 +9,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set nu
+set nohlsearch
 set smartcase
 set noswapfile
 set nobackup
@@ -25,7 +26,7 @@ set guioptions-=r
 set go-=L
 
 
-
+let g:qs_enable=0
 let g:EclimFileTypeValidate = 0
 let g:syntastic_java_checkers = []
 let g:airline_powerline_fonts = 1
@@ -64,16 +65,16 @@ Plug 'lewis6991/impatient.nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'enricobacis/vim-airline-clock'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'phaazon/hop.nvim'
 
 call plug#end()
-
 
 let g:dashboard_default_executive ='telescope'
 let g:suda#prompt = 'Password: '
 let g:sneak#label = 1
 let g:gitblame_enabled = 0
 
-"colorscheme gruvbox
+colorscheme gruvbox
 " colorscheme pablo
 nmap<leader>gd <plug>(coc-definition)
 nmap<leader>gr <Plug>(coc-references)
@@ -82,7 +83,10 @@ nnoremap <C-s> :GitFiles<CR>
 cnoremap w!! w !sudo tee > /dev/null %
 nnoremap <C-t> :FloatermToggle<CR>
 
-colorscheme rose-pine
+"almost like sneak
+nnoremap <C-x> :HopWord<CR>
+
+" colorscheme rose-pine
 set background=dark
 
 
@@ -138,6 +142,7 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 lua <<EOF
+require'hop'.setup()
     require('telescope').setup{
       defaults = {
         vimgrep_arguments = {
