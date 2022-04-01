@@ -59,13 +59,13 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'Valloric/YouCompleteMe'
-Plug 'justinmk/vim-sneak'
 Plug 'terrortylor/nvim-comment'
 Plug 'lewis6991/impatient.nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'enricobacis/vim-airline-clock'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'phaazon/hop.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -161,7 +161,7 @@ require("nvim-tree").setup{}
 EOF
 
 nnoremap <C-p> :Telescope find_files<CR>
-nnoremap <leader>F :Telescope live_grep<cr>
+nnoremap <leader>f :Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>sc :Telescope colorscheme<CR>

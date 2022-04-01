@@ -132,6 +132,7 @@ bindkey '^ ' autosuggest-accept
 alias :q="exit"
 alias Va="exit"
 alias sql="systemctl start docker; docker start suspicious_pike; docker exec -it suspicious_pike bash"
+alias javarun="/home/naruto/.sdkman/candidates/java/17.0.2-tem/bin/java -javaagent:/usr/share/idea/lib/idea_rt.jar=40875:/usr/share/idea/bin -Dfile.encoding=UTF-8 -classpath"
 alias k="xset r rate 175 65; setxkbmap -layout custom"
 alias ttyfont="cd /usr/share/kbd/consolefonts;setfont LatGrkCyr-12x22.psfu.gz;cd"
 eval "$(starship init zsh)"
