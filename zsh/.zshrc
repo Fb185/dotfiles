@@ -125,11 +125,12 @@ alias killnaruto="pkill -9 -u naruto"
 alias wydnaruto="pgrep -lu naruto"
 alias pb="~/.config/polybar/colorblocks/launch.sh"
 alias glb="git log --graph --oneline --decorate --all"
-alias cnf="cd /home/naruto/my_shit/dotfiles; nvim .;:q"
+alias cnf="lvim /home/naruto/my_shit/dotfiles;:q"
 export EDITOR=nvim;
 bindkey '   ' autosuggest-accept
 bindkey '^ ' autosuggest-accept
 alias :q="exit"
+alias lvim="/home/naruto/.local/bin/lvim"
 alias Va="exit"
 alias sql="systemctl start docker; docker start suspicious_pike; docker exec -it suspicious_pike bash"
 alias javarun="/home/naruto/.sdkman/candidates/java/17.0.2-tem/bin/java -javaagent:/usr/share/idea/lib/idea_rt.jar=40875:/usr/share/idea/bin -Dfile.encoding=UTF-8 -classpath"
