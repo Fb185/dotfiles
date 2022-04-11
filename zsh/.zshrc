@@ -110,7 +110,8 @@ source $ZSH/oh-my-zsh.sh
 clear
 alias vimrc="vim /home/naruto/my_shit/dotfiles/vim/.vimrc"
 alias v="vim"
-alias vim="nvim"
+alias lvim="nvim"
+alias vim="lvim"
 alias nvimrc="cd /home/naruto/my_shit/dotfiles/nvim; nvim nvimrc;cd"
 alias cdd="cd /home/data2"
 alias t="tmux"

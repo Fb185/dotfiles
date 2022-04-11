@@ -12,7 +12,7 @@ exec --no-startup-id bash ~/.config/polybar/colorblocks/launch.sh
 exec --no-startup-id xset r rate 175 65
 exec --no-startup-id setxkbmap -layout custom
 exec --no-startup-id dunst
-exec --no-startup-id bash i3-battery-popup -L 30 -t 5m -n
+exec --no-startup-id bash i3-battery-popup -L 33 -t 5m -n
 
 # i3 config file (v4)
 #
