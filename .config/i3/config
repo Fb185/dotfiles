@@ -69,8 +69,8 @@ bindsym $mod+p exec setxkbmap -layout pt; exec xset r rate 175 65
 bindsym $mod+o exec setxkbmap -layout custom;exec xset r rate 175 65
 
 
-bindsym $mod+z exec picom -b --experimental-backends
-bindsym $mod+shift+z exec killall picom
+bindsym $mod+z exec picom -b --experimental-backends && ~/.config/polybar/colorblocks/launch.sh
+bindsym $mod+shift+z exec killall picom && killall polybar
 
 bindsym $mod+period exec discord --enable-accelerated-mjpeg-decode --enable-accelerated-video --ignore-gpu-blacklist --enable-native-gpu-memory-buffers --enable-gpu-rasterizationd
 
