@@ -1,1 +1,0 @@
-/home/naruto/.config/lvim/config.lua

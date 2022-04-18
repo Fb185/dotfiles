@@ -1,0 +1,53 @@
+
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+# Disables the line_break module, making the prompt a single line.
+[line_break]
+disabled = true
+
+[git_branch]
+symbol = ""
+
+[directory]
+style = "bold cyan"
+truncate_to_repo = false
+truncation_length = 2
+
+
+[python]
+disabled = true
+#symbol = ""
+#style = "bold green"
+
+[java]
+disabled = true
+
+
+[username]
+disabled = false
+
+
+[hostname]
+ssh_only = false
+style = "bold italic #87A752"
+
+
+
+format = """
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$hg_branch\
+  フレッド """
+
+
+
+
+
+
+
+
+
+
