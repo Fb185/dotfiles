@@ -1,5 +1,9 @@
 body {
-    background: #141414;
+    background-image: url('./wp6179829-anime-90s-wallpapers.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    /* background: #141414; */
     -moz-user-select: none;
     overflow: hidden;
     cursor: default;
@@ -86,7 +90,7 @@ body {
 
 .grid-container {
     height: 580px;
-    padding-top: 200px;
+    padding-top: 300px;
     margin-left: 14%;
     display: grid;
     opacity: 1;

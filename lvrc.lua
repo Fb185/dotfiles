@@ -1,4 +1,3 @@
-
 --[[
 lvim is the global options object
 
@@ -10,20 +9,37 @@ an executable
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
-require'hop'.setup()
+require 'hop'.setup()
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "onedarker"
+-- to disable icons and use a minimalist setup, uncomment the following
+-- lvim.use_icons = false
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.normal_mode["<C-x>"] = ":HopWord<cr>"
-lvim.keys.visual_mode["kj"] = "<esc>"
+lvim.keys.normal_mode["<C-x>"] = ":HopWord<CR>"
+lvim.builtin.alpha.active = true
+lvim.keys.visual_mode["kj"] = "<ESC>"
+lvim.transparent_window = true
+lvim.builtin.alpha.mode = "dashboard"
+lvim.builtin.project.detection_methods = { "=src" }
+lvim.builtin.treesitter.highlight.enabled = true
+vim.cmd([[ set rnu]])
+vim.cmd([[ set tabstop=4]])
+vim.cmd([[ set nohlsearch]])
+vim.cmd([[ set incsearch]])
+lvim.builtin.notify.active = true
+lvim.builtin.terminal.active = true
+lvim.builtin.nvimtree.setup.view.side = "left"
+lvim.builtin.nvimtree.show_icons.git = 0
+lvim.builtin.project.detection_methods = { "lsp", ".git" }
 -- unmap a default keymapping
--- lvim.keys.normal_mode["<C-Up>"] = false
--- edit a default keymapping
--- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
+-- vim.keymap.del("n", "<C-Up>")
+-- override a default keymapping
+-- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -57,12 +73,6 @@ lvim.keys.visual_mode["kj"] = "<esc>"
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.alpha.active = true
-lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
-lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -114,7 +124,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- local formatters = require "lvim.lsp.null-ls.formatters"
 -- formatters.setup {
 --   { command = "black", filetypes = { "python" } },
---   { command = "isort", filetypes = { "python" } },
+--   -- { command = "isort", filetypes = { "python" } },
 --   {
 --     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
 --     command = "prettier",
@@ -143,17 +153,27 @@ lvim.builtin.treesitter.highlight.enabled = true
 --     filetypes = { "javascript", "python" },
 --   },
 -- }
-
 -- Additional Plugins
 lvim.plugins = {
-    {"phaazon/hop.nvim"},
-    {
-      "folke/trouble.nvim",
-      cmd = "TroubleToggle",
-    },
-}
+  -- { "folke/tokyonight.nvim" },
+  {
+    -- "folke/trouble.nvim",
+    -- cmd = "TroubleToggle",
+    'phaazon/hop.nvim',
+  },
+  { "enricobacis/vim-airline-clock" },
+  { "mfussenegger/nvim-jdtls" }, }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- lvim.autocommands.custom_groups = {
---   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
--- }
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--   pattern = { "*.json", "*.jsonc" },
+--   -- enable wrap mode for json files only
+--   command = "setlocal wrap",
+-- })
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "zsh",
+--   callback = function()
+--     -- let treesitter use bash highlight for zsh files as well
+--     require("nvim-treesitter.highlight").attach(0, "bash")
+--   end,
+-- })

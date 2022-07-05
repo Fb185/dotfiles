@@ -109,14 +109,16 @@ source $ZSH/oh-my-zsh.sh
 # wal -R
 clear
 alias vimrc="vim /home/naruto/my_shit/dotfiles/vim/.vimrc"
-alias v="vim"
-alias lvim="nvim"
+alias v="bash vim"
+alias neofetch="fastfetch"
+alias asd="source /home/naruto/asd/./asd.sh -d"
 alias vim="lvim"
+alias ll="tree"
 alias nvimrc="cd /home/naruto/my_shit/dotfiles/nvim; nvim nvimrc;cd"
 alias cdd="cd /home/data2"
 alias t="tmux"
 alias h="htop"
-alias cheat="/home/naruto/./cht.sh"
+alias cheat="/home/naruto/./cht.sh"zsh
 alias p="pacman -S"
 alias pss="pacman -Ss"
 alias yss="yay -Ss"
@@ -126,8 +128,8 @@ alias killnaruto="pkill -9 -u naruto"
 alias wydnaruto="pgrep -lu naruto"
 alias pb="~/.config/polybar/colorblocks/launch.sh"
 alias glb="git log --graph --oneline --decorate --all"
-alias cnf="lvim /home/naruto/my_shit/dotfiles;:q"
-export EDITOR=nvim;
+alias cnf="cd /home/naruto/my_shit/dotfiles;lvim;:q"
+export EDITOR=lvim;
 bindkey '   ' autosuggest-accept
 bindkey '^ ' autosuggest-accept
 alias :q="exit"
@@ -148,6 +150,6 @@ fi
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+/home/naruto/./art.sh
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-/home/naruto/./art.sh

@@ -58,7 +58,7 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-floaterm'
-Plug 'Valloric/YouCompleteMe'
+#Plug 'Valloric/YouCompleteMe'
 Plug 'terrortylor/nvim-comment'
 Plug 'lewis6991/impatient.nvim'
 Plug 'akinsho/toggleterm.nvim'
