@@ -113,28 +113,27 @@ alias v="bash vim"
 alias neofetch="fastfetch"
 alias asd="source /home/naruto/asd/./asd.sh -d"
 alias vim="lvim"
-alias ll="tree"
+alias ll="tree -L 1 ."
 alias nvimrc="cd /home/naruto/my_shit/dotfiles/nvim; nvim nvimrc;cd"
 alias cdd="cd /home/data2"
+alias thura="zathura"
 alias t="tmux"
 alias h="htop"
 alias cheat="/home/naruto/./cht.sh"zsh
-alias p="pacman -S"
-alias pss="pacman -Ss"
-alias yss="yay -Ss"
-alias pi="pacman -Si"
-alias yi="yay -Si"
+alias pss="paru -Ss"
+alias pi="paru -Si"
 alias killnaruto="pkill -9 -u naruto"
 alias wydnaruto="pgrep -lu naruto"
 alias pb="~/.config/polybar/colorblocks/launch.sh"
 alias glb="git log --graph --oneline --decorate --all"
-alias cnf="cd /home/naruto/my_shit/dotfiles;lvim;:q"
+alias cnf="cd /home/naruto/my_shit/dotfiles;lvim;"
 export EDITOR=lvim;
 bindkey '   ' autosuggest-accept
 bindkey '^ ' autosuggest-accept
 alias :q="exit"
 alias lvim="/home/naruto/.local/bin/lvim"
 alias Va="exit"
+alias gamemodeready="killall picom; killall polybar; killall dunst; killall python3; killall bash; killall sleep;systemctl --user start gamemoded; xrandr --output eDP-1 --off;killall kitty; exec steam"
 alias sql="systemctl start docker; docker start suspicious_pike; docker exec -it suspicious_pike bash"
 alias javarun="/home/naruto/.sdkman/candidates/java/17.0.2-tem/bin/java -javaagent:/usr/share/idea/lib/idea_rt.jar=40875:/usr/share/idea/bin -Dfile.encoding=UTF-8 -classpath"
 alias k="xset r rate 175 65; setxkbmap -layout custom"
@@ -150,6 +149,6 @@ fi
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-/home/naruto/./art.sh
+# /home/naruto/./art.sh
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
