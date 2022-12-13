@@ -20,7 +20,7 @@ vim.opt.expandtab = true
 lvim.builtin.bufferline.active = false
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "onedarker"
+lvim.colorscheme = "tokyonight"
 
 require('undotree').setup()
 local augroup = vim.api.nvim_create_augroup
@@ -183,10 +183,9 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- }
 -- Additional Plugins
 lvim.plugins = {
-    -- { "folke/tokyonight.nvim" },
+    { "folke/tokyonight.nvim" },
     -- "folke/trouble.nvim",
     -- cmd = "TroubleToggle",
-    { "jiaoshijie/undotree" },
     { "enricobacis/vim-airline-clock" },
     { "mfussenegger/nvim-jdtls" },
 }

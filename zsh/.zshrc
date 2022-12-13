@@ -109,15 +109,18 @@ source $ZSH/oh-my-zsh.sh
 # wal -R
 clear
 alias vimrc="vim /home/naruto/my_shit/dotfiles/vim/.vimrc"
+# alias a="cd $(find ~/my_shit -type d | fzf -e --tac --reverse --info=inline --border=sharp --color=border:yellow)"
 alias v="bash vim"
 alias neofetch="fastfetch"
-alias asd="source /home/naruto/asd/./asd.sh -d"
+alias asd="~/.local/bin/tmux-sessionizer"
+alias sdf="~/.local/bin/tmux-windowizer"
 alias vim="lvim"
 alias ll="tree -L 1 ."
 alias nvimrc="cd /home/naruto/my_shit/dotfiles/nvim; nvim nvimrc;cd"
 alias cdd="cd /home/data2"
-alias thura="zathura"
+alias thura="xdg-open"
 alias t="tmux"
+alias dietmux="tmux kill-server"
 alias h="htop"
 alias cheat="/home/naruto/./cht.sh"zsh
 alias pss="paru -Ss"
@@ -139,7 +142,6 @@ alias javarun="/home/naruto/.sdkman/candidates/java/17.0.2-tem/bin/java -javaage
 alias k="xset r rate 175 65; setxkbmap -layout custom"
 alias ttyfont="cd /usr/share/kbd/consolefonts;setfont LatGrkCyr-12x22.psfu.gz;cd"
 eval "$(starship init zsh)"
-
 if acpi | grep -oh "Discharging"
 then
     echo You are running on battery
