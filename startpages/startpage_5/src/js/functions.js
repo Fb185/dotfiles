@@ -52,6 +52,15 @@ function ddg(string, arg){
   }
 }
 
+function startpage(string, arg){
+  if (arg == null)
+      output.innerHTML = "To search the web (using startpage) run for example: s cool startpages"
+  else
+  {
+    search_query = "https://www.startpage.com/search?q=" + string.replace("s ", '');
+    window.location.replace(search_query);
+  }
+}
 function goog(string, arg){
   if (arg == null)
       output.innerHTML = "To search the web (using google) run for example: g cool startpages"
@@ -92,6 +101,8 @@ function evalInput(event) {
       window.close();
     else if (command == "d")
       ddg(str, argument);
+    else if (command == "s")
+      startpage(str, argument);
     else if (command == "g")
       goog(str, argument);
     else if (command == "whoami")

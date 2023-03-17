@@ -22,7 +22,6 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "tokyonight"
 
-require('undotree').setup()
 local augroup = vim.api.nvim_create_augroup
 -- local narutoGroup = augroup('narutoGroup', {})
 local autocmd = vim.api.nvim_create_autocmd
@@ -59,7 +58,6 @@ vim.cmd([[ set rnu]])
 vim.cmd([[ set tabstop=4]])
 vim.cmd([[ set nohlsearch]])
 vim.cmd([[ set incsearch]])
-lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 -- lvim.builtin.nvimtree.show_icons.git = 0

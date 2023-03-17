@@ -49,7 +49,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-utils/vim-man'
 Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
-Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 Plug 'nvim-lua/popup.nvim'
 Plug 'ThePrimeagen/harpoon'
 Plug 'nvim-telescope/telescope.nvim'
@@ -58,13 +57,9 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-floaterm'
-#Plug 'Valloric/YouCompleteMe'
 Plug 'terrortylor/nvim-comment'
 Plug 'lewis6991/impatient.nvim'
-Plug 'akinsho/toggleterm.nvim'
 Plug 'enricobacis/vim-airline-clock'
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'phaazon/hop.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()

@@ -107,7 +107,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # wal -R
-clear
 alias vimrc="vim /home/naruto/my_shit/dotfiles/vim/.vimrc"
 # alias a="cd $(find ~/my_shit -type d | fzf -e --tac --reverse --info=inline --border=sharp --color=border:yellow)"
 alias v="bash vim"
@@ -142,11 +141,7 @@ alias javarun="/home/naruto/.sdkman/candidates/java/17.0.2-tem/bin/java -javaage
 alias k="xset r rate 175 65; setxkbmap -layout custom"
 alias ttyfont="cd /usr/share/kbd/consolefonts;setfont LatGrkCyr-12x22.psfu.gz;cd"
 eval "$(starship init zsh)"
-if acpi | grep -oh "Discharging"
-then
-    echo You are running on battery
-fi
-
+bash /home/naruto/my_shit/dotfiles/script.sh
 
 
 
