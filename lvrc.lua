@@ -182,6 +182,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- Additional Plugins
 lvim.plugins = {
     { "folke/tokyonight.nvim" },
+    { "morhetz/gruvbox" },
     -- "folke/trouble.nvim",
     -- cmd = "TroubleToggle",
     { "enricobacis/vim-airline-clock" },
