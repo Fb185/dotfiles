@@ -1,10 +1,29 @@
+export ZSH=$HOME/.oh-my-zsh
 
-#
+
+
+alias nvim-latex="NVIM_APPNAME=latexVim nvim"
+# alias nvim-kick="NVIM_APPNAME=kickstart nvim"
+# alias nvim-chad="NVIM_APPNAME=NvChad nvim"
+# alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+
+function nvims() {
+  items=("default" "lvim" "latexVim" "NvChad" "AstroNvim")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
+
+bindkey -s ^a "nvims\n"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -108,6 +127,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # wal -R
 alias vimrc="vim /home/naruto/my_shit/dotfiles/vim/.vimrc"
+alias python="ipython"
+alias ls="lsd"
 # alias a="cd $(find ~/my_shit -type d | fzf -e --tac --reverse --info=inline --border=sharp --color=border:yellow)"
 alias v="bash vim"
 alias neofetch="fastfetch"
@@ -117,7 +138,7 @@ alias vim="lvim"
 alias ll="tree -L 1 ."
 alias nvimrc="cd /home/naruto/my_shit/dotfiles/nvim; nvim nvimrc;cd"
 alias cdd="cd /home/data2"
-alias thura="xdg-open"
+# alias thura="xdg-open"
 alias t="tmux"
 alias dietmux="tmux kill-server"
 alias h="htop"
@@ -138,9 +159,17 @@ alias Va="exit"
 alias gamemodeready="killall picom; killall polybar; killall dunst; killall python3; killall bash; killall sleep;systemctl --user start gamemoded; xrandr --output eDP-1 --off;killall kitty; exec steam"
 alias sql="systemctl start docker; docker start suspicious_pike; docker exec -it suspicious_pike bash"
 alias javarun="/home/naruto/.sdkman/candidates/java/17.0.2-tem/bin/java -javaagent:/usr/share/idea/lib/idea_rt.jar=40875:/usr/share/idea/bin -Dfile.encoding=UTF-8 -classpath"
-alias k="xset r rate 175 65; setxkbmap -layout custom"
+alias k="xset r rate 175 65; setxkbmap -layout custom" 
+alias tor="cd /home/naruto/snap/tor-browser_en-US; ./start-tor-browser.desktop"
+alias i2p="/home/naruto/i2p/i2prouter start"
 alias ttyfont="cd /usr/share/kbd/consolefonts;setfont LatGrkCyr-12x22.psfu.gz;cd"
 eval "$(starship init zsh)"
+thura() {
+    xdg-open "$1" &
+}
+so() {
+  surfraw -browser=firefox youtube "$1" &
+}
 bash /home/naruto/my_shit/dotfiles/script.sh
 
 
